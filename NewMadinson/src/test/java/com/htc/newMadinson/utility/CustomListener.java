@@ -23,7 +23,7 @@ public class CustomListener implements ITestListener{
 		Object testClass = result.getInstance();
 		WebDriver driver = ((BaseTest)testClass).getDriver();
 		System.out.println(("*** Test execution " + result.getMethod().getMethodName() + " passed..."));
-		Util.ScreenShot(driver, result.getMethod().getMethodName(), GlobalVars.passFilePath);
+		SeleniumUtility.ScreenShot(driver, result.getMethod().getMethodName(), GlobalVars.passFilePath);
 		ExtentTestManager.getTest().log(Status.PASS, "Test Passed");
 	}
 
@@ -32,7 +32,7 @@ public class CustomListener implements ITestListener{
 		System.out.println("*** Test execution " + result.getMethod().getMethodName() + " failed...");	
 		Object testClass = result.getInstance();
 		WebDriver driver = ((BaseTest)testClass).getDriver();
-		Util.ScreenShot(driver, result.getName(), GlobalVars.failFilePath );
+		SeleniumUtility.ScreenShot(driver, result.getName(), GlobalVars.failFilePath );
 		ExtentTestManager.getTest().log(Status.FAIL, "Test Failed");
 		System.out.println(result.getThrowable().getStackTrace());
 		

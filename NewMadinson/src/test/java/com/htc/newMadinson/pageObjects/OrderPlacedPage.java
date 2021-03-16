@@ -4,23 +4,27 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.WebDriver;
 
-import com.htc.newMadinson.utility.Util;
+import com.htc.newMadinson.utility.SeleniumUtility;
 
-public class OrderPlacedPage {
+public class OrderPlacedPage extends BasePage {
 	
 	protected WebDriver driver;
-	Util utils = new Util(driver);
+	protected BasePage basePage;
+	
 	String text;
 	
+	
 	public OrderPlacedPage(WebDriver driver) {
+		super(driver);
 		this.driver = driver;
+		basePage = new BasePage(driver);
 	}
 	
 	private By orderAssertionTxtBy = By.xpath("(//h1[text() = \"Your order has been received.\"])");
 	
 	public String checkOutAssertion() {
 		try {
-			utils.waitForVisibilityOfElementLocatable(driver, orderAssertionTxtBy);
+			basePage.waitForVisibilityOfElementLocatable(driver, orderAssertionTxtBy);
 			text = driver.findElement(orderAssertionTxtBy).getText();
 		}
 		catch(ElementNotVisibleException ev) {

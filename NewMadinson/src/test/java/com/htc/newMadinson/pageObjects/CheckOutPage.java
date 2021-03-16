@@ -7,18 +7,22 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-import com.htc.newMadinson.utility.Util;
+import com.htc.newMadinson.utility.SeleniumUtility;
 
 
 
-public class CheckOutPage {
+public class CheckOutPage extends BasePage {
 	
 	protected WebDriver driver;
+	protected BasePage basePage;
+	
 	public CheckOutPage(WebDriver driver) {
+		super(driver);
 		this.driver = driver;
+		basePage = new BasePage(driver);
 	}
 	
-	Util utils = new Util(driver);
+	SeleniumUtility utils = new SeleniumUtility(driver);
 
 	private By firstNameTxtBoxBy = By.id("billing:firstname");
 	private By lastNameTxtBoxBy = By.id("billing:lastname");
@@ -59,9 +63,8 @@ public class CheckOutPage {
 
 	public void selectCountry(String countryName) {
 		Select country = new Select(driver.findElement(countryDropDownListBy));
-//		utils = new Util(driver);
 		try {
-		utils.waitForElementToBeSelectable(driver, countryDropDownListBy);
+		basePage.waitForElementToBeSelected(driver, countryDropDownListBy);
 		country.selectByVisibleText(countryName);
 		}catch(ElementNotSelectableException e) {
 			e.printStackTrace();
@@ -84,8 +87,7 @@ public class CheckOutPage {
 
 	public void clickShippingMethodContinueBtn() {
 		try {
-//			utils = new Util(driver);
-			utils.waitForElementToBeClickable(driver, shippingContinueBtnBy);
+			basePage.waitForElementToBeClickable(driver, shippingContinueBtnBy);
 			driver.findElement(shippingContinueBtnBy).click();
 		}
 		catch(ElementClickInterceptedException ec) {
@@ -96,8 +98,7 @@ public class CheckOutPage {
 
 	public void clickPaymentContBtn() {
 		try {
-//			utils = new Util(driver);
-			utils.waitForElementToBeClickable(driver, paymentContinueBtnBy);
+			basePage.waitForElementToBeClickable(driver, paymentContinueBtnBy);
 			driver.findElement(paymentContinueBtnBy).click();
 		}
 		catch(ElementClickInterceptedException ec) {
@@ -108,8 +109,7 @@ public class CheckOutPage {
 
 	public void clickPlaceOrderBtnBy() {
 		try {
-//			utils = new Util(driver);
-			utils.waitForElementToBeClickable(driver, placeOrderBtnBy);
+			basePage.waitForElementToBeClickable(driver, placeOrderBtnBy);
 			driver.findElement(placeOrderBtnBy).click();	
 		}
 		catch(ElementClickInterceptedException ec) {
@@ -118,12 +118,11 @@ public class CheckOutPage {
 		
 	}
 	
-	public void scroll(Util scrollLink) {
-//		utils = new Util(driver);
-		utils.scrollToVisibleElement(paymentInformationText, driver);
+	public void scroll(SeleniumUtility scrollLink) {
+		basePage.scrollToVisibleElement(paymentInformationText, driver);
 	}
 
-	public void checkOutForTheProduct(String firstname, String lastname, String address, String city, String pincode, String country, String phoneNumber, Util scrollLink) {
+	public void checkOutForTheProduct(String firstname, String lastname, String address, String city, String pincode, String country, String phoneNumber, SeleniumUtility scrollLink) {
 		
 		//clickProceedBtn();
 		//setFirstName(firstname);

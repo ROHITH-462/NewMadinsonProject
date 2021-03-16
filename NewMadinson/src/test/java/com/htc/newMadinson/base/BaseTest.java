@@ -11,7 +11,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 
 import com.htc.newMadinson.pageObjects.ShoppingCartPage;
-import com.htc.newMadinson.utility.Util;
+import com.htc.newMadinson.utility.SeleniumUtility;
 import com.htc.newMadinson.pageObjects.CheckOutPage;
 import com.htc.newMadinson.pageObjects.DashBoardPage;
 import com.htc.newMadinson.pageObjects.IndexPage;
@@ -34,7 +34,7 @@ public class BaseTest {
 	protected ShoppingCartPage addToCartPage;
 	protected CheckOutPage checkOutPage;
 	protected OrderPlacedPage orderPlacedPage;
-	protected Util utils;
+	protected SeleniumUtility utils;
 	
 
 //	@BeforeSuite
@@ -76,15 +76,15 @@ public class BaseTest {
 		addToCartPage = new ShoppingCartPage(driver);
 		checkOutPage = new CheckOutPage(driver);
 		orderPlacedPage = new OrderPlacedPage(driver);
-		utils = new Util(driver);
+		utils = new SeleniumUtility(driver);
 	}
 	
-	@AfterTest
-	public void signOff() {
-		System.out.println("Status " + indexPage.isLogin());
-		if(indexPage.isLogin() == true)
-			indexPage.signOff();
-	}
+//	@AfterTest
+//	public void signOff() {
+//		System.out.println("Status " + indexPage.isLogin());
+//		if(indexPage.isLogin() == true)
+//			indexPage.signOff();
+//	}
 	
 	@AfterClass
 	public void tearDown() {

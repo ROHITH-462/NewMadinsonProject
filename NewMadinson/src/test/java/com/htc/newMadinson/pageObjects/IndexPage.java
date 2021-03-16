@@ -4,15 +4,17 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.WebDriver;
 
-import com.htc.newMadinson.utility.Util;
 
-public class IndexPage {
+
+public class IndexPage extends BasePage{
 
 	protected WebDriver driver;
-	protected Util utils;
+	protected BasePage basePage;
 
 	public IndexPage(WebDriver driver) {
+		super(driver);
 		this.driver = driver;
+		basePage = new BasePage(driver);
 	}
 
 
@@ -23,8 +25,7 @@ public class IndexPage {
 
 	public void clickAccountBtn() {
 		try {
-			utils = new Util(driver);
-			utils.waitForElementToBeClickable(driver, accountBtnBy);
+			basePage.waitForElementToBeClickable(driver, accountBtnBy);
 			driver.findElement(accountBtnBy).click();
 		}catch(ElementClickInterceptedException e){
 			e.printStackTrace();
@@ -62,7 +63,7 @@ public class IndexPage {
 		boolean flag = false;
 		clickAccountBtn();
 		if(driver.findElement(logoutBtnBy).isDisplayed())
-			utils.waitForVisibilityOfElementLocatable(driver, logoutBtnBy);
+			basePage.waitForVisibilityOfElementLocatable(driver, logoutBtnBy);
 			flag = true;
 		return flag;
 	}

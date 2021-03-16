@@ -7,17 +7,18 @@ import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import com.htc.newMadinson.utility.Util;
+import com.htc.newMadinson.utility.SeleniumUtility;
 
-public class ProductPage {
+public class ProductPage extends BasePage{
 	
 	protected WebDriver driver;
+	protected BasePage basePage;
 	
 	public ProductPage(WebDriver driver) {
+		super(driver);
 		this.driver = driver;
 	}
-	
-	Util utils = null;
+
 	
 	private By selectShirtBy = By.xpath("(//a[@title=\"Plaid Cotton Shirt\"])[2]");
 	private By menBtnBy = By.xpath("(//a[text()=\"Men\"])[1]");
@@ -30,9 +31,9 @@ public class ProductPage {
 		driver.findElement(selectShirtBy).click();;
 	}
 	
-	public void scroll(Util scrollLink) {
-		utils = new Util(driver);
-		utils.scrollToVisibleElement(menBtnBy, driver);
+	public void scroll(SeleniumUtility scrollLink) {
+		basePage = new BasePage(driver);
+		basePage.scrollToVisibleElement(menBtnBy, driver);
 	}
 	
 	public void selectColour() {
@@ -51,14 +52,14 @@ public class ProductPage {
 	public void clickAddToCartBtn() {
 		WebElement addToCartButton = driver.findElement(addToCartBtnBy);
 		try {
-		utils.waitForElementToBeClickable(driver, addToCartBtnBy);
+			basePage.waitForElementToBeClickable(driver, addToCartBtnBy);
 		}catch(ElementClickInterceptedException e) {
 			e.printStackTrace();
 		}
 		addToCartButton.click();
 	}
 	
-	public void enterProductDetails(Properties prop, Util scrollLink) {
+	public void enterProductDetails(Properties prop, SeleniumUtility scrollLink) {
 		scroll(scrollLink);
 		selectShirt();
 		selectColour();

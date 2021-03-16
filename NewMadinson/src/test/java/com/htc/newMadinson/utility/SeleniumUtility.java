@@ -16,35 +16,19 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.htc.newMadinson.base.GlobalVars;
 
-public class Util {
+public class SeleniumUtility {
 
 	protected WebDriver driver;
 
 	WebDriverWait wait = null;
 	
-	public Util(WebDriver driver) {
+	public SeleniumUtility(WebDriver driver) {
 		this.driver = driver;
 	}
 
-	public void waitForVisibilityOfElementLocatable(WebDriver driver, By locators) {
-		wait = new WebDriverWait(driver, GlobalVars.explicitWaitTime);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(locators));
-	}
 	
-	public void waitForElementToBeClickable(WebDriver driver, By locators) {
-		wait = new WebDriverWait(driver, GlobalVars.explicitWaitTime);
-		wait.until(ExpectedConditions.elementToBeClickable(locators));
-	}
 	
-	public void waitForElementToBeSelectable(WebDriver driver, By locators) {
-		wait = new WebDriverWait(driver, GlobalVars.explicitWaitTime);
-		wait.until(ExpectedConditions.elementToBeSelected(locators));
-	}
-	
-	public void scrollToVisibleElement(By scrollLink, WebDriver driver) {
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].scrollIntoView();", driver.findElement(scrollLink));
-	}	
+	//wait should moved to base page
 	
 	public static String ScreenShot(WebDriver driver, String fileName, String filePath ) {
 
@@ -62,11 +46,6 @@ public class Util {
 	public static String timeStamp() {
 		return new SimpleDateFormat("E, dd MMMM-yyyy  hh mm ss").format(new Date());
 
-	}
-
-
-	public WebDriver getDriver() {
-		return driver;
 	}
 
 }
