@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.htc.newMadinson.test.LoginTest">
+      <class name="com.htc.newMadinson.test.CheckOutTest">
         <methods>
+          <include name="checkOutPageTest_shouldSelectTheProduct_orderShouldBePlaced" invocation-numbers="0"/>
           <include name="tearDown"/>
-          <include name="loginTest"/>
-          <include name="signOff"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.htc.newMadinson.test.LoginTest -->
+      </class> <!-- com.htc.newMadinson.test.CheckOutTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
