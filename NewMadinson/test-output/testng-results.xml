@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-03-16T22:12:59 IST" name="com.htc.Madinson" finished-at="2021-03-16T22:13:14 IST" duration-ms="15119">
+  <suite started-at="2021-03-16T23:14:54 IST" name="com.htc.Madinson" finished-at="2021-03-16T23:15:08 IST" duration-ms="14029">
     <groups>
     </groups>
-    <test started-at="2021-03-16T22:12:59 IST" name="Madinson WebPages Test" finished-at="2021-03-16T22:13:14 IST" duration-ms="15119">
+    <test started-at="2021-03-16T23:14:54 IST" name="Madinson WebPages Test" finished-at="2021-03-16T23:15:08 IST" duration-ms="14029">
       <class name="com.htc.newMadinson.test.RegistrationTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.htc.newMadinson.test.RegistrationTest@41e1e210]" started-at="2021-03-16T22:12:59 IST" name="setUp" finished-at="2021-03-16T22:13:07 IST" duration-ms="8330" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.htc.newMadinson.test.RegistrationTest@41e1e210]" started-at="2021-03-16T23:14:54 IST" name="setUp" finished-at="2021-03-16T23:15:03 IST" duration-ms="8548" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="createNewAccountTest_credantialsShouldBeFetchedFromExcel_shouldRegisterSuccessful(java.util.Map)[pri:0, instance:com.htc.newMadinson.test.RegistrationTest@41e1e210]" started-at="2021-03-16T22:13:09 IST" name="createNewAccountTest_credantialsShouldBeFetchedFromExcel_shouldRegisterSuccessful" data-provider="Registration_Details" finished-at="2021-03-16T22:13:13 IST" duration-ms="3920" status="FAIL">
+        <test-method signature="createNewAccountTest_credantialsShouldBeFetchedFromExcel_shouldRegisterSuccessful(java.util.Map)[pri:0, instance:com.htc.newMadinson.test.RegistrationTest@41e1e210]" started-at="2021-03-16T23:15:04 IST" name="createNewAccountTest_credantialsShouldBeFetchedFromExcel_shouldRegisterSuccessful" data-provider="Registration_Details" finished-at="2021-03-16T23:15:07 IST" duration-ms="3504" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Email=dine.rohi13344@htc.com, LastName=B, FirstName=Rohith, Password=123spa, ConfirmPassword=123spa}]]>
+                <![CDATA[{Email=xyz@htc.com, LastName=B, FirstName=xyz, Password=123spa, ConfirmPassword=123spa}]]>
               </value>
             </param>
           </params>
@@ -27,8 +27,8 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DELL-PC', ip: '192.168.42.6', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '15.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.90, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\DELL\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:54251}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2b7468c38887bc2afe803fec95b1fb5f
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.90, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\DELL\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:53195}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: eaced84cfec718c559bdc9b5ac88f89e
 *** Element info: {Using=xpath, value=//span[text() = "Thank you for registering with Madison Island."]}]]>
             </message>
             <full-stacktrace>
@@ -38,8 +38,8 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DELL-PC', ip: '192.168.42.6', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '15.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.90, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\DELL\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:54251}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2b7468c38887bc2afe803fec95b1fb5f
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.90, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\DELL\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:53195}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: eaced84cfec718c559bdc9b5ac88f89e
 *** Element info: {Using=xpath, value=//span[text() = "Thank you for registering with Madison Island."]}
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
@@ -92,7 +92,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createNewAccountTest_credantialsShouldBeFetchedFromExcel_shouldRegisterSuccessful -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.htc.newMadinson.test.RegistrationTest@41e1e210]" started-at="2021-03-16T22:13:14 IST" name="tearDown" finished-at="2021-03-16T22:13:14 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.htc.newMadinson.test.RegistrationTest@41e1e210]" started-at="2021-03-16T23:15:08 IST" name="tearDown" finished-at="2021-03-16T23:15:08 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
