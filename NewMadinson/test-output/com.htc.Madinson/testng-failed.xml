@@ -6,14 +6,6 @@
   </listeners>
   <test thread-count="5" name="Madinson WebPages Test(failed)">
     <classes>
-      <class name="com.htc.newMadinson.test.RegistrationTest">
-        <methods>
-          <include name="createNewAccountTest_credantialsShouldBeFetchedFromExcel_shouldRegisterSuccessful" invocation-numbers="0"/>
-          <include name="tearDown"/>
-          <include name="signOff"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- com.htc.newMadinson.test.RegistrationTest -->
       <class name="com.htc.newMadinson.test.LoginTest">
         <methods>
           <include name="tearDown"/>
@@ -22,6 +14,14 @@
           <include name="setUp"/>
         </methods>
       </class> <!-- com.htc.newMadinson.test.LoginTest -->
+      <class name="com.htc.newMadinson.test.RegistrationTest">
+        <methods>
+          <include name="createNewAccountTest_credantialsShouldBeFetchedFromExcel_shouldRegisterSuccessful" invocation-numbers="0"/>
+          <include name="tearDown"/>
+          <include name="signOff"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.htc.newMadinson.test.RegistrationTest -->
     </classes>
   </test> <!-- Madinson WebPages Test(failed) -->
 </suite> <!-- Failed suite [com.htc.Madinson] -->

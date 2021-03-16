@@ -23,7 +23,28 @@ public class CheckOutTest extends BaseTest {
 										   mapData.get("PostalCode"), mapData.get("Country"), mapData.get("Telephone"), utils);
 		
 		Assert.assertEquals(orderPlacedPage.checkOutAssertion(), "YOUR ORDER HAS BEEN RECEIVED.");
-//		indexPage.isLogin();
-//		indexPage.signOff();
+
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//indexPage.isLogin();
+//indexPage.signOff();

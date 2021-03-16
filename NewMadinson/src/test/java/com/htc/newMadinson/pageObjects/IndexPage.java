@@ -62,6 +62,7 @@ public class IndexPage {
 		boolean flag = false;
 		clickAccountBtn();
 		if(driver.findElement(logoutBtnBy).isDisplayed())
+			utils.waitForVisibilityOfElementLocatable(driver, logoutBtnBy);
 			flag = true;
 		return flag;
 	}

@@ -19,11 +19,30 @@ public class RegistrationTest extends BaseTest {
 		registrationPage.createNewAccount( mapData.get("FirstName"), mapData.get("LastName"), mapData.get("Email"), 
 										   mapData.get("Password"),  mapData.get("ConfirmPassword"));
 		
-		Assert.assertEquals(registrationPage.registrationAssertionText(), "Thank you for registering with Madison Island.");
-//		indexPage.signOff();
-//		indexPage.isLogin();
-		
-		
+		Assert.assertEquals(registrationPage.registrationAssertionText(), "Thank you for registering with Madison Island.");				
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//indexPage.signOff();
+//indexPage.isLogin();
