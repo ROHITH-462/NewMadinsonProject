@@ -8,8 +8,8 @@
 	<test name="Madinson WebPages Test">
 		<classes>
 			<class name="com.htc.newMadinson.test.RegistrationTest" /> 
-			<class name="com.htc.newMadinson.test.LoginTest" /> 
-			<class name="com.htc.newMadinson.test.CheckOutTest" /> 
+			<!-- <class name="com.htc.newMadinson.test.LoginTest" /> 
+			<class name="com.htc.newMadinson.test.CheckOutTest" />  -->
 		</classes>
 	</test>
 </suite>

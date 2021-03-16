@@ -51,14 +51,10 @@ public class BaseTest {
 		}
 		return prop;
 	}
-	
 
 	public WebDriver getDriver() {
 		return driver;
 	}
-
-
-
 
 	@BeforeClass
 	public void setUp() {

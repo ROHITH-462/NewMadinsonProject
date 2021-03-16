@@ -21,7 +21,7 @@ public class IndexPage extends BasePage{
 	private By accountBtnBy = By.xpath("(//span[text() = \"Account\"])[1]");
 	private By registerBtnBy = By.xpath("//a[text() = \"Register\"]");
 	private By loginBtnBy = By.xpath("//a[text() = \"Log In\"]");
-	private By logoutBtnBy = By.xpath("(//a[text() = \"Log Out\"])");
+	
 
 	public void clickAccountBtn() {
 		try {
@@ -40,10 +40,7 @@ public class IndexPage extends BasePage{
 		driver.findElement(loginBtnBy).click();
 	}
 
-	public void clickLogOutBtn() {
-		driver.findElement(logoutBtnBy).click();
-	}
-
+	
 	public void navigateToRegisterPage() {
 		clickAccountBtn();
 		clickRegisterBtn();
@@ -54,18 +51,39 @@ public class IndexPage extends BasePage{
 		clickLoginBtn();
 	}
 
-	public void signOff() {
-		clickAccountBtn();
-		clickLogOutBtn();
-	}
-
-	public boolean isLogin() {
-		boolean flag = false;
-		clickAccountBtn();
-		if(driver.findElement(logoutBtnBy).isDisplayed())
-			basePage.waitForVisibilityOfElementLocatable(driver, logoutBtnBy);
-			flag = true;
-		return flag;
-	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//public boolean isLogin() {
+//boolean flag = false;
+//clickAccountBtn();
+//if(driver.findElement(logoutBtnBy).isDisplayed())
+//	basePage.waitForVisibilityOfElementLocatable(driver, logoutBtnBy);
+//	flag = true;
+//return flag;
+//}
 
