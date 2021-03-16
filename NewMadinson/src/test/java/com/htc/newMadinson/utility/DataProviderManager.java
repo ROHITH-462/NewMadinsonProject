@@ -14,7 +14,7 @@ public class DataProviderManager {
 		prop = new Properties();
 		FileInputStream fis;
 		try {
-			fis = new FileInputStream("C:\\Users\\DELL\\eclipse-workspace\\NewMadinson\\src\\test\\resources\\props.properties");
+			fis = new FileInputStream("C:\\Users\\DELL\\git\\NewMadinsonProject\\NewMadinson\\src\\test\\resources\\props.properties");
 			prop.load(fis);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -25,6 +25,7 @@ public class DataProviderManager {
 	@DataProvider(name = "Registration_Details")
 	public Object[][] registrationDetails(){
 		ExcelFileHandler ref = new ExcelFileHandler(prop.getProperty("datarepository.madinson.excelfile"));
+		System.out.println("Excel File" + prop.getProperty("datarepository.madinson.excelfile"));
 		Object[][] registrationDataSet =ref.getDataRecords(prop.getProperty("datarepository.madinson.excelfile.sheetname.register"));
 		return registrationDataSet;
 	}

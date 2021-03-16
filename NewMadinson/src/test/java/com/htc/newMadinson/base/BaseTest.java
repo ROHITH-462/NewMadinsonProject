@@ -43,7 +43,7 @@ public class BaseTest {
 		prop = new Properties();
 		FileInputStream fis;
 		try {
-			fis = new FileInputStream("C:\\Users\\DELL\\eclipse-workspace\\NewMadinson\\src\\test\\resources\\props.properties");
+			fis = new FileInputStream("C:\\Users\\DELL\\git\\NewMadinsonProject\\NewMadinson\\src\\test\\resources\\props.properties");
 			prop.load(fis);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
