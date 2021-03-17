@@ -12,6 +12,7 @@ import org.testng.annotations.BeforeClass;
 
 import com.htc.newMadinson.pageObjects.ShoppingCartPage;
 import com.htc.newMadinson.utility.SeleniumUtility;
+import com.htc.newMadinson.pageObjects.BasePage;
 import com.htc.newMadinson.pageObjects.CheckOutPage;
 import com.htc.newMadinson.pageObjects.DashBoardPage;
 import com.htc.newMadinson.pageObjects.IndexPage;
@@ -35,6 +36,7 @@ public class BaseTest {
 	protected CheckOutPage checkOutPage;
 	protected OrderPlacedPage orderPlacedPage;
 	protected SeleniumUtility utils;
+	protected BasePage basePage;
 	
 
 //	@BeforeSuite
@@ -73,6 +75,7 @@ public class BaseTest {
 		checkOutPage = new CheckOutPage(driver);
 		orderPlacedPage = new OrderPlacedPage(driver);
 		utils = new SeleniumUtility(driver);
+		basePage = new BasePage(driver);
 	}
 	
 //	@AfterTest

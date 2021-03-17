@@ -18,6 +18,7 @@ public class LoginTest extends BaseTest {
 		loginPage.performLogin(mapData.get("Email"), mapData.get("Password"));
 		if(mapData.get("Expected").equals("MY DASHBOARD")) {
 			Assert.assertEquals(dashBoardPage.checkValidLogin(),"MY DASHBOARD");
+		basePage.signOff();
 		}
 		
 		if(mapData.get("Expected").equals("Invalid login or password.")) {
