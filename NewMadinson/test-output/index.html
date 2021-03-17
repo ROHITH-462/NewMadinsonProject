@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-com_htc_Madinson" class="navigator-link">
-              <span class="suite-name border-failed">com.htc.Madinson</span>
+              <span class="suite-name border-passed">com.htc.Madinson</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,21 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-com_htc_Madinson" class="hide-methods failed suite-com_htc_Madinson"> (hide)</a> <!-- hide-methods failed suite-com_htc_Madinson -->
-                      <a href="#" panel-name="suite-com_htc_Madinson" class="show-methods failed suite-com_htc_Madinson"> (show)</a> <!-- show-methods failed suite-com_htc_Madinson -->
-                    </span>
-                    <div class="method-list-content failed suite-com_htc_Madinson">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-com_htc_Madinson" title="com.htc.newMadinson.test.RegistrationTest" class="method navigator-link" hash-for-method="createNewAccountTest_credantialsShouldBeFetchedFromExcel_shouldRegisterSuccessful({Email=abc729@htc.com, LastName=B, FirstName=xyz, Password=123spa, ConfirmPassword=123spa})">createNewAccountTest_credantialsShouldBeFetchedFromExcel_shouldRegisterSuccessful({Email=abc729@htc.com, LastName=B, FirstName=xyz, Password=123spa, ConfirmPassword=123spa})</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-com_htc_Madinson -->
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -119,6 +105,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-com_htc_Madinson" title="com.htc.newMadinson.test.CheckOutTest" class="method navigator-link" hash-for-method="checkOutPageTest_shouldSelectTheProduct_orderShouldBePlaced({password=123spa, Address=1,abc, Telephone=9.898989898E9, FirstName=Rohith, PostalCode=600079.0, Cou...)">checkOutPageTest_shouldSelectTheProduct_orderShouldBePlaced({password=123spa, Address=1,abc, Telephone=9.898989898E9, FirstName=Rohith, PostalCode=600079.0, Cou...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-com_htc_Madinson" title="com.htc.newMadinson.test.RegistrationTest" class="method navigator-link" hash-for-method="createNewAccountTest_credantialsShouldBeFetchedFromExcel_shouldRegisterSuccessful({Email=abe729@htc.com, LastName=B, FirstName=xyz, Password=123spa, ConfirmPassword=123spa})">createNewAccountTest_credantialsShouldBeFetchedFromExcel_shouldRegisterSuccessful({Email=abe729@htc.com, LastName=B, FirstName=xyz, Password=123spa, ConfirmPassword=123spa})</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -143,46 +134,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-com_htc_Madinson" class="panel com_htc_Madinson">
-          <div class="suite-com_htc_Madinson-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.htc.newMadinson.test.RegistrationTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="createNewAccountTest_credantialsShouldBeFetchedFromExcel_shouldRegisterSuccessful({Email=abc729@htc.com, LastName=B, FirstName=xyz, Password=123spa, ConfirmPassword=123spa})">
-                  </a> <!-- createNewAccountTest_credantialsShouldBeFetchedFromExcel_shouldRegisterSuccessful({Email=abc729@htc.com, LastName=B, FirstName=xyz, Password=123spa, ConfirmPassword=123spa}) -->
-                  <span class="method-name">createNewAccountTest_credantialsShouldBeFetchedFromExcel_shouldRegisterSuccessful</span>
-                  <span class="parameters">({Email=abc729@htc.com, LastName=B, FirstName=xyz, Password=123spa, ConfirmPassword=123spa})</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[text() = &quot;Thank you for registering with Madison Island.&quot;]&quot;}
-  (Session info: chrome=89.0.4389.90)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DELL-PC&apos;, ip: &apos;192.168.1.11&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;15.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.90, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\DELL\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:50845}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: da0fd7d1dc36a5552d898dfbecd8ea5c
-*** Element info: {Using=xpath, value=//span[text() = &quot;Thank you for registering with Madison Island.&quot;]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at com.htc.newMadinson.pageObjects.RegistrationPage.registrationAssertionText(RegistrationPage.java:49)
-	at com.htc.newMadinson.test.RegistrationTest.createNewAccountTest_credantialsShouldBeFetchedFromExcel_shouldRegisterSuccessful(RegistrationTest.java:21)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-com_htc_Madinson-class-failed -->
           <div class="suite-com_htc_Madinson-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -203,6 +154,22 @@ Session ID: da0fd7d1dc36a5552d898dfbecd8ea5c
                   </a> <!-- loginTest({Expected=Invalid login or password., Email=jai24@htc.com, Password=123welcome}) -->
                   <span class="method-name">loginTest</span>
                   <span class="parameters">({Expected=Invalid login or password., Email=jai24@htc.com, Password=123welcome})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-com_htc_Madinson-class-passed -->
+          <div class="suite-com_htc_Madinson-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.htc.newMadinson.test.RegistrationTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createNewAccountTest_credantialsShouldBeFetchedFromExcel_shouldRegisterSuccessful({Email=abe729@htc.com, LastName=B, FirstName=xyz, Password=123spa, ConfirmPassword=123spa})">
+                  </a> <!-- createNewAccountTest_credantialsShouldBeFetchedFromExcel_shouldRegisterSuccessful({Email=abe729@htc.com, LastName=B, FirstName=xyz, Password=123spa, ConfirmPassword=123spa}) -->
+                  <span class="method-name">createNewAccountTest_credantialsShouldBeFetchedFromExcel_shouldRegisterSuccessful</span>
+                  <span class="parameters">({Email=abe729@htc.com, LastName=B, FirstName=xyz, Password=123spa, ConfirmPassword=123spa})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -284,24 +251,24 @@ data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'checkOutPageTest_shouldSelectTheProduct_orderShouldBePlaced')
 data.setCell(0, 2, 'com.htc.newMadinson.test.CheckOutTest')
-data.setCell(0, 3, 30114);
+data.setCell(0, 3, 31288);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'loginTest')
-data.setCell(1, 2, 'com.htc.newMadinson.test.LoginTest')
-data.setCell(1, 3, 4933);
+data.setCell(1, 1, 'createNewAccountTest_credantialsShouldBeFetchedFromExcel_shouldRegisterSuccessful')
+data.setCell(1, 2, 'com.htc.newMadinson.test.RegistrationTest')
+data.setCell(1, 3, 4836);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'createNewAccountTest_credantialsShouldBeFetchedFromExcel_shouldRegisterSuccessful')
-data.setCell(2, 2, 'com.htc.newMadinson.test.RegistrationTest')
-data.setCell(2, 3, 2935);
+data.setCell(2, 1, 'loginTest')
+data.setCell(2, 2, 'com.htc.newMadinson.test.LoginTest')
+data.setCell(2, 3, 4773);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'loginTest')
 data.setCell(3, 2, 'com.htc.newMadinson.test.LoginTest')
-data.setCell(3, 3, 2786);
+data.setCell(3, 3, 2729);
 window.suiteTableData['com_htc_Madinson']= { tableData: data, tableDiv: 'times-div-com_htc_Madinson'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 40 seconds</span>
+              <span class="suite-total-time">Total running time: 43 seconds</span>
               <div id="times-div-com_htc_Madinson">
               </div> <!-- times-div-com_htc_Madinson -->
             </div> <!-- times-div -->
@@ -333,48 +300,46 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">createNewAccountTest_credantialsShouldBeFetchedFromExcel_shouldRegisterSuccessful({Email=abc729@htc.com, LastName=B, FirstName=xyz, Password=123spa, ConfirmPassword=123spa})</span>
-                <span class="method-start">7323 ms</span>
+                <span class="method-name">createNewAccountTest_credantialsShouldBeFetchedFromExcel_shouldRegisterSuccessful({Email=abe729@htc.com, LastName=B, FirstName=xyz, Password=123spa, ConfirmPassword=123spa})</span>
+                <span class="method-start">6864 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">10908 ms</span>
+                <span class="method-start">12240 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.htc.newMadinson.test.LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">10911 ms</span>
+                <span class="method-start">12243 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">loginTest({Expected=MY DASHBOARD, Email=dine.rohi333@htc.com, Password=123spa})</span>
-                <span class="method-start">16890 ms</span>
+                <span class="method-start">16415 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">loginTest({Expected=Invalid login or password., Email=jai24@htc.com, Password=123welcome})</span>
-                <span class="method-start">22317 ms</span>
+                <span class="method-start">21694 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">25604 ms</span>
+                <span class="method-start">24868 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.htc.newMadinson.test.CheckOutTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">25605 ms</span>
+                <span class="method-start">24869 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">checkOutPageTest_shouldSelectTheProduct_orderShouldBePlaced({password=123spa, Address=1,abc, Telephone=9.898989898E9, FirstName=Rohith, PostalCode=600079.0, Cou...)</span>
-                <span class="method-start">31706 ms</span>
+                <span class="method-start">29543 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">62484 ms</span>
+                <span class="method-start">61470 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
