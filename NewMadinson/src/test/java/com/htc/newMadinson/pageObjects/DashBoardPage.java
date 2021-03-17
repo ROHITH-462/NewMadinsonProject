@@ -37,8 +37,12 @@ public class DashBoardPage {
 	}
 	
 	public void selectCategory() {
+		try {
 		placeCursorOnMen();
 		clickShirtOption();
+		}catch(Throwable t) {
+			t.printStackTrace();
+		}
 	}
 	
 }

@@ -14,11 +14,10 @@ public class RegistrationTest extends BaseTest {
 	public void createNewAccountTest_credantialsShouldBeFetchedFromExcel_shouldRegisterSuccessful(Map<String, String> mapData) {
 		
 		System.out.println("Registration Page Test");
-		
+	
 		indexPage.navigateToRegisterPage();
 		registrationPage.createNewAccount( mapData.get("FirstName"), mapData.get("LastName"), mapData.get("Email"), 
 										   mapData.get("Password"),  mapData.get("ConfirmPassword"));
-		
 		Assert.assertEquals(registrationPage.registrationAssertionText(), "Thank you for registering with Madison Island.");
 		basePage.signOff();
 	}

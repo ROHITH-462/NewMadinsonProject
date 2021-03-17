@@ -33,9 +33,7 @@ public class CustomListener implements ITestListener{
 		Object testClass = result.getInstance();
 		WebDriver driver = ((BaseTest)testClass).getDriver();
 		SeleniumUtility.ScreenShot(driver, result.getName(), GlobalVars.failFilePath );
-		ExtentTestManager.getTest().log(Status.FAIL, "Test Failed");
-		System.out.println(result.getThrowable().getStackTrace());
-		
+		ExtentTestManager.getTest().log(Status.FAIL, "Test Failed");		
 	}
 
 	

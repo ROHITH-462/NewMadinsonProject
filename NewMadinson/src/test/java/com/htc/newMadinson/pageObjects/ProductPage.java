@@ -49,6 +49,11 @@ public class ProductPage extends BasePage{
 		driver.findElement(qtyTextBoxBy).sendKeys(prop.getProperty("ShirtQuantity"));
 	}
 	
+	public void setQty(String shirtQuantity) {
+		driver.findElement(qtyTextBoxBy).clear();
+		driver.findElement(qtyTextBoxBy).sendKeys(shirtQuantity);
+	}
+	
 	public void clickAddToCartBtn() {
 		WebElement addToCartButton = driver.findElement(addToCartBtnBy);
 		try {
@@ -59,12 +64,16 @@ public class ProductPage extends BasePage{
 		addToCartButton.click();
 	}
 	
-	public void enterProductDetails(Properties prop, SeleniumUtility scrollLink) {
+	public void enterProductDetails(SeleniumUtility scrollLink, String shirtQuantity) {
+		try {
 		scroll(scrollLink);
 		selectShirt();
 		selectColour();
 		selectSize();
-		setQty(prop);
+		setQty(shirtQuantity);
 		clickAddToCartBtn();
+		}catch(Throwable t) {
+			t.printStackTrace();
+		}
 	}
 }

@@ -10,23 +10,24 @@ import com.htc.newMadinson.base.BaseTest;
 
 
 public class LoginTest extends BaseTest {
-	
+
 	@Test(dataProvider = "Login", dataProviderClass = com.htc.newMadinson.utility.DataProviderManager.class)
 	public void loginTest(Map<String, String> mapData)
-	{
+	{	
 		indexPage.navigateToLoginPage();
 		loginPage.performLogin(mapData.get("Email"), mapData.get("Password"));
-		if(mapData.get("Expected").equals("MY DASHBOARD")) {
+		if(mapData.get("Expected").equals("MY DASHBOARD")) { 
 			Assert.assertEquals(dashBoardPage.checkValidLogin(),"MY DASHBOARD");
-		basePage.signOff();
+			basePage.signOff();
 		}
-		
-		if(mapData.get("Expected").equals("Invalid login or password.")) {
+
+		if(mapData.get("Expected").equals("Invalid login or password.")) 
 			Assert.assertEquals(dashBoardPage.checkInvalidLogin(), "Invalid login or password.");
-		}
+
 	}
-	
 }
+
+
 
 
 

@@ -12,18 +12,19 @@ import com.htc.newMadinson.utility.SeleniumUtility;
 
 
 public class CheckOutPage extends BasePage {
-	
+
 	protected WebDriver driver;
 	protected BasePage basePage;
-	
+
 	public CheckOutPage(WebDriver driver) {
 		super(driver);
 		this.driver = driver;
 		basePage = new BasePage(driver);
 	}
-	
+
 	SeleniumUtility utils = new SeleniumUtility(driver);
 
+	private By addressDropDownBy = By.id("billing-address-select");
 	private By firstNameTxtBoxBy = By.id("billing:firstname");
 	private By lastNameTxtBoxBy = By.id("billing:lastname");
 	private By addressTxtBoxBy = By.id("billing:street1");
@@ -37,7 +38,13 @@ public class CheckOutPage extends BasePage {
 	private By paymentContinueBtnBy = By.xpath("(//span[text() = \"Continue\"])[4]");
 	private By placeOrderBtnBy = By.xpath("(//span[text() = \"Place Order\"])");
 	private By paymentInformationText = By.xpath("//h2[text() = \"Billing Information\"]");
-	
+	private By lastNameTextByScroll = By.xpath("(//label[text()=\"Last Name\"])[1]");
+
+
+	public void selectAddressDropDown() {
+		Select addressDropDown = new Select(driver.findElement(addressDropDownBy));
+		addressDropDown.selectByVisibleText("New Address");
+	}
 
 	public void setFirstName(String firstname) {
 		driver.findElement(firstNameTxtBoxBy).clear();	
@@ -50,29 +57,36 @@ public class CheckOutPage extends BasePage {
 	}
 
 	public void setAddress(String address) {
+		driver.findElement(addressTxtBoxBy).clear();
 		driver.findElement(addressTxtBoxBy).sendKeys(address);
 	}
 
 	public void setCity(String city) {
+		driver.findElement(cityTxtBoxBy).clear();
 		driver.findElement(cityTxtBoxBy).sendKeys(city);
 	}
 
 	public void setPinCode(String pincode) {
+		driver.findElement(pinCodeTxtBoxBy).clear();
 		driver.findElement(pinCodeTxtBoxBy).sendKeys(pincode);
+	}
+	
+	public void scroll1() {
+		basePage.scrollToVisibleElement(lastNameTextByScroll, driver);
 	}
 
 	public void selectCountry(String countryName) {
 		Select country = new Select(driver.findElement(countryDropDownListBy));
 		try {
-		basePage.waitForElementToBeSelected(driver, countryDropDownListBy);
-		country.selectByVisibleText(countryName);
+			basePage.waitForElementToBeSelected(driver, countryDropDownListBy);
+			country.selectByVisibleText(countryName);
 		}catch(ElementNotSelectableException e) {
 			e.printStackTrace();
 		}
-		
 	}
 
 	public void setPhoneNumber(String phoneNumber) {
+		driver.findElement(telephoneTxtBoxBy).clear();
 		driver.findElement(telephoneTxtBoxBy).sendKeys(phoneNumber);
 	}
 
@@ -81,8 +95,13 @@ public class CheckOutPage extends BasePage {
 	}
 
 	public void shippingMethodRadioBtn() {
-		WebElement shippingRadioBtn = driver.findElement(shippingMethodRadioBtnBy);
-		shippingRadioBtn.click();
+		try {
+			basePage.waitForElementToBeClickable(driver, shippingMethodRadioBtnBy);
+			WebElement shippingRadioBtn = driver.findElement(shippingMethodRadioBtnBy);
+			shippingRadioBtn.click();
+		}catch(ElementClickInterceptedException ec) {
+			ec.printStackTrace();
+		}	
 	}
 
 	public void clickShippingMethodContinueBtn() {
@@ -92,8 +111,7 @@ public class CheckOutPage extends BasePage {
 		}
 		catch(ElementClickInterceptedException ec) {
 			ec.printStackTrace();
-		}
-		
+		}	
 	}
 
 	public void clickPaymentContBtn() {
@@ -104,7 +122,6 @@ public class CheckOutPage extends BasePage {
 		catch(ElementClickInterceptedException ec) {
 			ec.printStackTrace();
 		}
-		
 	}
 
 	public void clickPlaceOrderBtnBy() {
@@ -115,31 +132,34 @@ public class CheckOutPage extends BasePage {
 		catch(ElementClickInterceptedException ec) {
 			ec.printStackTrace();
 		}
-		
+
 	}
-	
-	public void scroll(SeleniumUtility scrollLink) {
+
+	public void scroll() {
 		basePage.scrollToVisibleElement(paymentInformationText, driver);
 	}
 
-	public void checkOutForTheProduct(String firstname, String lastname, String address, String city, String pincode, String country, String phoneNumber, SeleniumUtility scrollLink) {
-		
-		//clickProceedBtn();
-		//setFirstName(firstname);
-		//setLastName(lastname);
-		//setAddress(address);
-		//setCity(city);
-		//setPinCode(pincode);
-		//selectCountry(country);
-		//setPhoneNumber(phoneNumber);
-		clickBillingInfoContinueBtn();
-		scroll(scrollLink);
-		//shippingMethodRadioBtn();
-		//selectShippingMethod();
-		//shippingMethodRadioBtn();
-		clickShippingMethodContinueBtn();
-		clickPaymentContBtn();
-		clickPlaceOrderBtnBy();
+	public void checkOutForTheProduct(String firstname, String lastname, String address, String city, String pincode, String country, String phoneNumber) {
+
+		try {
+			selectAddressDropDown();	
+			setFirstName(firstname);
+			setLastName(lastname);
+			setAddress(address);
+			setCity(city);
+			setPinCode(pincode);
+			scroll1();
+//			selectCountry(country);
+			setPhoneNumber(phoneNumber);
+			clickBillingInfoContinueBtn();
+//			scroll();
+			shippingMethodRadioBtn();
+			clickShippingMethodContinueBtn();
+			clickPaymentContBtn();
+			clickPlaceOrderBtnBy();
+		}catch(Throwable e) {
+			e.printStackTrace();
+		}
 	}
 }
 
@@ -165,9 +185,9 @@ public class CheckOutPage extends BasePage {
 
 
 
-		
 
-		
+
+
 
 
 

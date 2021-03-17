@@ -56,13 +56,16 @@ public class RegistrationPage {
 	
 	
 	public void createNewAccount(String firstName, String lastName, String eMail, String password, String confirmPassword) {
-		
+		try {
 		setFirstName(firstName);
 		setLastName(lastName);
 		setEmail(eMail);
 		setPassword(password);
 		setConfirmPassword(confirmPassword);
 		clickRegisterBtn();
+		}catch(Throwable t) {
+			t.printStackTrace();
+		}
 	}
 	
 	

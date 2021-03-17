@@ -21,7 +21,7 @@ public class IndexPage extends BasePage{
 	private By accountBtnBy = By.xpath("(//span[text() = \"Account\"])[1]");
 	private By registerBtnBy = By.xpath("//a[text() = \"Register\"]");
 	private By loginBtnBy = By.xpath("//a[text() = \"Log In\"]");
-	
+
 
 	public void clickAccountBtn() {
 		try {
@@ -40,15 +40,23 @@ public class IndexPage extends BasePage{
 		driver.findElement(loginBtnBy).click();
 	}
 
-	
+
 	public void navigateToRegisterPage() {
-		clickAccountBtn();
-		clickRegisterBtn();
+		try {
+			clickAccountBtn();
+			clickRegisterBtn();
+		}catch(Throwable t) {
+			t.printStackTrace();
+		}
 	}
 
 	public void navigateToLoginPage() {
-		clickAccountBtn();
-		clickLoginBtn();
+		try {
+			clickAccountBtn();
+			clickLoginBtn();
+		}catch(Throwable t) {
+			t.printStackTrace();
+		}
 	}
 
 }

@@ -30,9 +30,13 @@ public class LoginPage {
 	}
 		
 	public void performLogin(String eMail, String password) {
+		try {
 		setEmail(eMail);
 		setPassword(password);
 		clickLoginBtn();
+		}catch(Throwable t) {
+			t.printStackTrace();
+		}
 	}
 
 }

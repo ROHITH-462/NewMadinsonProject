@@ -13,15 +13,14 @@ public class CheckOutTest extends BaseTest {
 	public void checkOutPageTest_shouldSelectTheProduct_orderShouldBePlaced(Map<String, String> mapData) {
 		
 		System.out.println("CheckOutPageTest");
-		
 		indexPage.navigateToLoginPage();
 		loginPage.performLogin(mapData.get("email"), mapData.get("password"));
 		dashBoardPage.selectCategory();
-		productPage.enterProductDetails(prop, utils);
+		productPage.enterProductDetails(utils, mapData.get("ShirtQuantity"));
 		addToCartPage.clickProceedBtn();
 		checkOutPage.checkOutForTheProduct(mapData.get("FirstName"), mapData.get("LastName"), mapData.get("Address"), mapData.get("City"),
-										   mapData.get("PostalCode"), mapData.get("Country"), mapData.get("Telephone"), utils);
-		
+										   mapData.get("PostalCode"), mapData.get("Country"), mapData.get("Telephone"));
+	
 		Assert.assertEquals(orderPlacedPage.checkOutAssertion(), "YOUR ORDER HAS BEEN RECEIVED.");
 		basePage.signOff();
 	}
