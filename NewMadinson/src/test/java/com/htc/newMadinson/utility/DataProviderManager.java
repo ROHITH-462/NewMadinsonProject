@@ -6,41 +6,42 @@ import java.util.Properties;
 
 import org.testng.annotations.DataProvider;
 
+import com.htc.newMadinson.base.GlobalVars;
+
 public class DataProviderManager {
 
-	Properties prop;
+//	Properties prop;
 
-	public DataProviderManager(){
-		prop = new Properties();
-		FileInputStream fis;
-		try {
-			fis = new FileInputStream("src//test//resources//props.properties");
-			prop.load(fis);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}	
-	}
+//	public DataProviderManager(){
+//		prop = new Properties();
+//		FileInputStream fis;
+//		try {
+//			fis = new FileInputStream("src//test//resources//props.properties");
+//			prop.load(fis);
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}	
+//	}
 	
 	@DataProvider(name = "Registration_Details")
 	public Object[][] registrationDetails(){
-		ExcelFileHandler ref = new ExcelFileHandler(prop.getProperty("datarepository.madinson.excelfile"));
-		System.out.println("Excel File" + prop.getProperty("datarepository.madinson.excelfile"));
-		Object[][] registrationDataSet =ref.getDataRecords(prop.getProperty("datarepository.madinson.excelfile.sheetname.register"));
+		ExcelFileHandler ref = new ExcelFileHandler(GlobalVars.datarepository_madinson_excelfile);
+		Object[][] registrationDataSet =ref.getDataRecords(GlobalVars.datarepository_madinson_excelfile_sheetname_register);
 		return registrationDataSet;
 	}
 
 	@DataProvider(name = "Billing_Information")
 	public Object[][] billingInfo(){
-		ExcelFileHandler ref = new ExcelFileHandler(prop.getProperty("datarepository.madinson.excelfile"));
-		Object[][] registrationDataSet =ref.getDataRecords(prop.getProperty("datarepository.madinson.excelfile.sheetname.billinginfo"));
+		ExcelFileHandler ref = new ExcelFileHandler(GlobalVars.datarepository_madinson_excelfile);
+		Object[][] registrationDataSet =ref.getDataRecords(GlobalVars.datarepository_madinson_excelfile_sheetname_billinginfo);
 		return registrationDataSet;
 	}
 
 	@DataProvider(name = "Login")
 	public Object[][] LoginDetails(){
-		ExcelFileHandler ref = new ExcelFileHandler(prop.getProperty("datarepository.madinson.excelfile"));
-		Object[][] registrationDataSet =ref.getDataRecords(prop.getProperty("datarepository.madinson.excelfile.sheetname.login"));
+		ExcelFileHandler ref = new ExcelFileHandler(GlobalVars.datarepository_madinson_excelfile);
+		Object[][] registrationDataSet =ref.getDataRecords(GlobalVars.datarepository_madinson_excelfile_sheetname_login);
 		return registrationDataSet;
 	}
 
