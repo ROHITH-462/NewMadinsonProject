@@ -41,7 +41,7 @@ public class DashBoardPage {
 		placeCursorOnMen();
 		clickShirtOption();
 		}catch(Throwable t) {
-			t.printStackTrace();
+			System.out.println(t.getStackTrace());
 		}
 	}
 	

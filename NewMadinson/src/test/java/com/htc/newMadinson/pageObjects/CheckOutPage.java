@@ -158,7 +158,7 @@ public class CheckOutPage extends BasePage {
 			clickPaymentContBtn();
 			clickPlaceOrderBtnBy();
 		}catch(Throwable e) {
-			e.printStackTrace();
+			System.out.println(e.getStackTrace());
 		}
 	}
 }

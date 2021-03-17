@@ -73,7 +73,7 @@ public class ProductPage extends BasePage{
 		setQty(shirtQuantity);
 		clickAddToCartBtn();
 		}catch(Throwable t) {
-			t.printStackTrace();
+			System.out.println(t.getStackTrace());
 		}
 	}
 }

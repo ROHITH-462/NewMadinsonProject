@@ -64,7 +64,7 @@ public class RegistrationPage {
 		setConfirmPassword(confirmPassword);
 		clickRegisterBtn();
 		}catch(Throwable t) {
-			t.printStackTrace();
+			System.out.println(t.getStackTrace());
 		}
 	}
 	

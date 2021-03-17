@@ -46,7 +46,7 @@ public class IndexPage extends BasePage{
 			clickAccountBtn();
 			clickRegisterBtn();
 		}catch(Throwable t) {
-			t.printStackTrace();
+			System.out.println(t.getStackTrace());
 		}
 	}
 
@@ -55,7 +55,7 @@ public class IndexPage extends BasePage{
 			clickAccountBtn();
 			clickLoginBtn();
 		}catch(Throwable t) {
-			t.printStackTrace();
+			System.out.println(t.getStackTrace());
 		}
 	}
 

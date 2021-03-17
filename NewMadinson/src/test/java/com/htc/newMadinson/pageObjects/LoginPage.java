@@ -35,7 +35,7 @@ public class LoginPage {
 		setPassword(password);
 		clickLoginBtn();
 		}catch(Throwable t) {
-			t.printStackTrace();
+			System.out.println(t.getStackTrace());
 		}
 	}
 
