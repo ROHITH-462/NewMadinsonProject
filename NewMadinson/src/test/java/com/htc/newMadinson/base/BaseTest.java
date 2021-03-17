@@ -7,7 +7,6 @@ import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 
 import com.htc.newMadinson.pageObjects.ShoppingCartPage;
@@ -78,12 +77,6 @@ public class BaseTest {
 		basePage = new BasePage(driver);
 	}
 	
-//	@AfterTest
-//	public void signOff() {
-//		System.out.println("Status " + indexPage.isLogin());
-//		if(indexPage.isLogin() == true)
-//			indexPage.signOff();
-//	}
 	
 	@AfterClass
 	public void tearDown() {

@@ -1,28 +1,10 @@
 package com.htc.newMadinson.utility;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.util.Properties;
-
 import org.testng.annotations.DataProvider;
 
 import com.htc.newMadinson.base.GlobalVars;
 
 public class DataProviderManager {
-
-//	Properties prop;
-
-//	public DataProviderManager(){
-//		prop = new Properties();
-//		FileInputStream fis;
-//		try {
-//			fis = new FileInputStream("src//test//resources//props.properties");
-//			prop.load(fis);
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}	
-//	}
 	
 	@DataProvider(name = "Registration_Details")
 	public Object[][] registrationDetails(){
@@ -70,6 +52,25 @@ public class DataProviderManager {
 
 
 
+
+
+
+
+
+
+//Properties prop;
+
+//public DataProviderManager(){
+//	prop = new Properties();
+//	FileInputStream fis;
+//	try {
+//		fis = new FileInputStream("src//test//resources//props.properties");
+//		prop.load(fis);
+//	} catch (IOException e) {
+//		// TODO Auto-generated catch block
+//		e.printStackTrace();
+//	}	
+//}
 
 
 
