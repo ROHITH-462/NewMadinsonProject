@@ -8,7 +8,7 @@
     <classes>
       <class name="com.htc.newMadinson.test.RegistrationTest">
         <methods>
-          <include name="createNewAccountTest_credantialsShouldBeFetchedFromExcel_shouldRegisterSuccessful" invocation-numbers="0"/>
+          <include name="createNewAccountTest_credantialsShouldBeFetchedFromExcel_shouldRegisterSuccessful"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
